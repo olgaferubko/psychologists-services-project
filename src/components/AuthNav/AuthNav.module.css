@@ -1,0 +1,32 @@
+.linksContainer {
+    display: flex;
+    gap: 8px;
+}
+
+.login {
+    font-family: "Inter", sans-serif;
+    border: 1px solid rgba(25, 26, 21, 0.2);
+    border-radius: 30px;
+    width: 124px;
+    height: 48px;
+    background: transparent;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: #191a15;
+}
+
+.register {
+    font-family: "Inter", sans-serif;
+    border: none;    
+    border-radius: 30px;
+    width: 171px;
+    height: 48px;
+    background: #fc832c;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: #fbfbfb;
+}
