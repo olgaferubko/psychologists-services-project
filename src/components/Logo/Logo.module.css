@@ -5,6 +5,8 @@
     line-height: 1.2;
     letter-spacing: -0.02em;
     color: #fc832c;
+    display: flex;
+    align-items: center;
 }
 
 .point {

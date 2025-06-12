@@ -5,17 +5,19 @@ import Navigation from '../Navigation/Navigation';
 import UserMenu from "../UserMenu/UserMenu";
 import AuthNav from "../AuthNav/AuthNav";
 
+
 import s from './Header.module.css';
 
 
 const Header = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
     return (
+        
         <header className={s.header}>
-            <div className={s.nav}>
-                <Logo />
-                <Navigation />
-            </div>
+                <div className={s.nav}>
+                    <Logo />
+                    <Navigation />
+                </div>
                 {isLoggedIn ? <UserMenu /> : <AuthNav />}
         </header>
     );

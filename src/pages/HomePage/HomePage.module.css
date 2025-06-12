@@ -1,0 +1,159 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 128px;
+    background: #fbfbfb;
+    background: radial-gradient(
+    circle at bottom right,
+    rgba(252, 131, 44, 0.2) 0%,
+    transparent 80%
+  );
+}
+
+.textWrapper {
+    width: 595px;
+    margin-top: 126px;
+    margin-right: 125px;
+    margin-bottom: 140px;
+}
+
+.heading {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 1.025;
+    letter-spacing: -0.02em;
+    color: #191a15;
+    margin-bottom: 20px;
+}
+
+.span {
+    font-style: italic;
+    color: #fc832c;
+}
+
+.text {
+    width: 510px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.33333;
+    letter-spacing: -0.02em;
+    color: #191a15;
+    margin-bottom: 40px;
+}
+
+.start {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: 235px;
+    height: 60px;
+    background: #fc832c;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: #fbfbfb;
+}
+
+.arrow {
+    width: 27px;
+    height: 27px;
+}
+
+.rightBlock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    width: 464px;
+    height: 526px;
+    margin-top: 78px;
+    border-radius: 10px;
+}
+
+.wrapper {
+    position: absolute;
+    top: 411px;
+    right: 254px;
+    border-radius: 20px;
+    width: 311px;
+    height: 118px;
+    background: #fc832c;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconWrapper {
+    background: #fbfbfb;
+    color: #fc832c;
+    border-radius: 13px;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check {
+    width: 24px;
+    height: 21px;
+}
+
+.experience {
+    width: 178px;
+}
+
+.experienceText {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: rgba(251, 251, 251, 0.5);
+    margin-bottom: 8px;
+}
+
+.experienceNumber {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fbfbfb;
+}
+
+.questionWrapper {
+    position: absolute;
+    top: 263px;
+    left: -20px;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    background: #54be96;
+    transform: rotate(-15deg);
+    color: #fbfbfb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.peopleWrapper {
+    position: absolute;
+    top: 116px;
+    right: -20px;
+    border-radius: 10px;
+    width: 48px;
+    height: 48px;
+    background: #fbc75e;
+    transform: rotate(15deg);
+    color: #fbfbfb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
