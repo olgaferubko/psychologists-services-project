@@ -1,0 +1,119 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(25, 26, 21, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+    background:  #fbfbfb;
+    padding: 64px;
+    border-radius: 30px;
+    position: relative;
+    width: 565px;
+}
+
+.closeBtn {
+    position: absolute;
+    padding: 0;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    height: 32px;
+}
+
+.heading {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: #191a15;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(25, 26, 21, 0.5);
+    margin-bottom: 40px;
+}
+
+.label {
+    position: relative;
+    display: flex;
+    border: 1px solid rgba(25, 26, 21, 0.1);
+    border-radius: 12px;
+    padding: 16px 18px;
+    width: 438px;
+    height: 52px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #191a15;
+    margin-bottom: 18px;
+
+}
+
+.input {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #191a15;
+    border: none;
+    outline: none;
+    height: 20px;
+    width: 361px;
+    margin-left: 5px;
+    padding: 0;
+
+}
+
+.togglePasswordBtn {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    padding: 0;
+}
+
+.error {
+    font-size: 12px;
+    line-height: 1.33333;
+    color: #8d929a;
+    margin-bottom: 5px;
+}
+
+.submitBtn {
+    margin-top: 22px;
+    border-radius: 30px;
+    padding: 16px 196px;
+    width: 438px;
+    height: 52px;
+    background: #fc832c;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: #fbfbfb;
+    border: none;
+}
+
+.submitBtn:hover {
+    background: #f37113;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fbfbfb inset !important;
+  box-shadow: 0 0 0 1000px #fbfbfb inset !important;
+  -webkit-text-fill-color: #191a15 !important;
+}

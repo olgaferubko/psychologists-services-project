@@ -1,29 +1,39 @@
 import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import s from "./HomePage.module.css"
 import Header from "../../components/Header/Header";
 import { GoArrowUpRight } from "react-icons/go";
 import { FaCheck } from "react-icons/fa";
 import { MdOutlineQuestionMark } from "react-icons/md";
 import { MdPeopleAlt } from "react-icons/md";
+import AuthModal from "../../components/AuthModal/AuthModal";
+
+
 
 export default function HomePage() {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
     return (
         <>
-            <Header />
+            <Header onLoginOpen={openModal} />
+            {isModalOpen && <AuthModal onClose={closeModal} />}
             <title>Home</title>
             <div className={s.container}>
                 <div className={s.textWrapper}>
                 <h1 className={s.heading}>The road to the <span className={s.span}>depths</span> of the human soul</h1>
                 <p className={s.text}>We help you to reveal your potential, overcome challenges and find a guide in your own life with the help of our experienced psychologists.</p>
                 <Link to="/psychologists" className={s.start}>
-                    <a className={s.start}>Get started <GoArrowUpRight className={s.arrow} /></a>
+                    Get started <GoArrowUpRight className={s.arrow} />
                 </Link>
                 </div>
 
                 <div className={s.rightBlock}>
                     <img src="/images/home.jpg" alt="Psychologist" className={s.img} />
-                    <span className={s.questionWrapper}><MdOutlineQuestionMark className={s.question} /></span>
-                    <span className={s.peopleWrapper}><MdPeopleAlt className={s.people} /></span>
+                    <span className={s.questionWrapper}><MdOutlineQuestionMark /></span>
+                    <span className={s.peopleWrapper}><MdPeopleAlt /></span>
                     <div className={s.wrapper}>
                         <span className={s.iconWrapper}><FaCheck className={s.check} /></span>
                         <div className={s.experience}>

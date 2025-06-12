@@ -60,6 +60,10 @@
     color: #fbfbfb;
 }
 
+.start:hover {
+    background: #f37113;
+}
+
 .arrow {
     width: 27px;
     height: 27px;

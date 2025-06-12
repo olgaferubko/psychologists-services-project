@@ -9,7 +9,7 @@ import AuthNav from "../AuthNav/AuthNav";
 import s from './Header.module.css';
 
 
-const Header = () => {
+const Header = ({ onLoginOpen, onRegisterOpen }) => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
     return (
         
@@ -18,7 +18,7 @@ const Header = () => {
                     <Logo />
                     <Navigation />
                 </div>
-                {isLoggedIn ? <UserMenu /> : <AuthNav />}
+                {isLoggedIn ? <UserMenu /> : <AuthNav onLoginOpen={onLoginOpen} onRegisterOpen={onRegisterOpen} />}
         </header>
     );
 };

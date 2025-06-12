@@ -12,11 +12,9 @@ const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    // якщо треба локальні редюсери
   },
   extraReducers: (builder) => {
     builder
-      // register
       .addCase(register.pending, (state) => {
         state.isLoading = true;
         state.error = null;
@@ -31,7 +29,6 @@ const authSlice = createSlice({
         state.error = action.payload;
       })
 
-      // logIn
       .addCase(logIn.pending, (state) => {
         state.isLoading = true;
         state.error = null;
@@ -46,7 +43,6 @@ const authSlice = createSlice({
         state.error = action.payload;
       })
 
-      // logOut
       .addCase(logOut.pending, (state) => {
         state.isLoading = true;
         state.error = null;
@@ -61,7 +57,6 @@ const authSlice = createSlice({
         state.error = action.payload;
       })
 
-      // refresh
       .addCase(refresh.pending, (state) => {
         state.isLoading = true;
         state.error = null;
