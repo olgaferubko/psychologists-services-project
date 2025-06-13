@@ -90,7 +90,7 @@ const AuthModal = ({ onClose }) => {
               onClick={togglePasswordVisibility}
               className={s.togglePasswordBtn}
             >
-              {showPassword ? <AiOutlineEye size={20} /> : <AiOutlineEyeInvisible size={20} />}
+              {showPassword ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
             </button>
           </label>
           <p className={s.error}>{errors.password?.message}</p>
