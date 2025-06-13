@@ -134,7 +134,7 @@
 .questionWrapper {
     position: absolute;
     top: 263px;
-    left: -20px;
+    left: -35px;
     border-radius: 10px;
     width: 40px;
     height: 40px;
@@ -146,10 +146,15 @@
     align-items: center;
 }
 
+.question {
+    position: absolute;
+    transform: rotate(15deg);
+}
+
 .peopleWrapper {
     position: absolute;
     top: 116px;
-    right: -20px;
+    right: -40px;
     border-radius: 10px;
     width: 48px;
     height: 48px;

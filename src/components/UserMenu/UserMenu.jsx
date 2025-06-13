@@ -14,8 +14,8 @@ export default function UserMenu() {
 
     return (
         <div className={s.wrapper}>
-            <MdPerson />
-            <p className={s.username}>{user.name}</p>
+            <span className={s.iconWrapper}><MdPerson className={s.icon} /></span>
+            <p className={s.username}>{user.displayName}</p>
             <button
                 className={s.logOutBtn}
                 type="button"
@@ -28,7 +28,7 @@ export default function UserMenu() {
                         })
                 }
             >
-                Logout
+                Log out
             </button>
         </div>
     );

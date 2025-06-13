@@ -1,0 +1,49 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.iconWrapper {
+    margin-right: 14px;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    background: #fc832c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    color: #fbfbfb;
+}
+
+.username {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: #191a15;
+    margin-right: 28px;
+}
+
+.logOutBtn {
+    border: 1px solid rgba(25, 26, 21, 0.2);
+    border-radius: 30px;
+    width: 135px;
+    height: 48px;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: #191a15;
+}
+
+.logOutBtn:hover {
+    border: 1px solid rgba(21, 21, 10, 0.363);
+}

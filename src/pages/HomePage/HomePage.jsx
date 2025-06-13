@@ -36,7 +36,7 @@ export default function HomePage() {
 
                 <div className={s.rightBlock}>
                     <img src="/images/home.jpg" alt="Psychologist" className={s.img} />
-                    <span className={s.questionWrapper}><MdOutlineQuestionMark /></span>
+                    <span className={s.questionWrapper}><MdOutlineQuestionMark className={s.question} /></span>
                     <span className={s.peopleWrapper}><MdPeopleAlt /></span>
                     <div className={s.wrapper}>
                         <span className={s.iconWrapper}><FaCheck className={s.check} /></span>
