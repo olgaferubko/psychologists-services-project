@@ -42,6 +42,7 @@
     line-height: 1.25;
     letter-spacing: -0.01em;
     color: #191a15;
+    background: transparent;
 }
 
 .logOutBtn:hover {

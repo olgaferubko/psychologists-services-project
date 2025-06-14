@@ -1,6 +1,6 @@
 .link {
   position: relative;
-  text-decoration: none;
+  outline: none;
 }
 
 .navList {

@@ -58,6 +58,7 @@
     line-height: 1.2;
     letter-spacing: -0.01em;
     color: #fbfbfb;
+    outline: none;
 }
 
 .start:hover {

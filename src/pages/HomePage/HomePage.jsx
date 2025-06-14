@@ -7,20 +7,18 @@ import { FaCheck } from "react-icons/fa";
 import { MdOutlineQuestionMark } from "react-icons/md";
 import { MdPeopleAlt } from "react-icons/md";
 import AuthModal from "../../components/AuthModal/AuthModal";
-import RegistrationModal from "../../components/RegistrationModal/RegistartionModal";
+import RegistrationModal from "../../components/RegistrationModal/RegistrationModal";
 
 
 
 export default function HomePage() {
 
     const [modalType, setModalType] = useState(null);
-
-    const openLoginModal = () => setModalType('login');
-    const openRegisterModal = () => setModalType('register');
     const closeModal = () => setModalType(null);
+    
     return (
         <>
-            <Header onLoginOpen={openLoginModal} onRegisterOpen={openRegisterModal} />
+
             {modalType === 'login' && <AuthModal onClose={closeModal} />}
             {modalType === 'register' && <RegistrationModal onClose={closeModal} />}
 

@@ -1,0 +1,118 @@
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(25, 26, 21, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #fbfbfb;
+  padding: 64px;
+  border-radius: 30px;
+   width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  color: #191a15;
+}
+
+.header {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #191a15;
+  margin-bottom: 20px;
+}
+
+.paragraph {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(25, 26, 21, 0.5);
+  margin-bottom: 40px;
+}
+
+.psychologistsWrapper {
+  display: flex;
+  gap: 14px;
+}
+
+.photo {
+  border-radius: 15px;
+  width: 44px;
+  height: 44px;
+}
+
+.nameWrapper {
+  margin-bottom: 40px;
+}
+
+.label {
+    display: flex;
+    border: 1px solid rgba(25, 26, 21, 0.1);
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #191a15;
+    margin-bottom: 16px;
+}
+
+.input {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #191a15;
+    border: none;
+    outline: none;
+    margin-left: 5px;
+    padding: 0;
+}
+
+.telWrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.text {
+   border: none;
+  outline: none;
+  resize: none;  
+  background-color: transparent;
+}
+
+.sendBtn {
+  border-radius: 30px;
+  padding: 16px 217px;
+  background: #fc832c;
+  outline: none;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #fbfbfb;
+  margin-top: 24px;
+}
+
+.sendBtn:hover {
+  background: #f37113;
+}
