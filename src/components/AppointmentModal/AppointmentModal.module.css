@@ -15,9 +15,37 @@
   background-color: #fbfbfb;
   padding: 64px;
   border-radius: 30px;
-   width: 100%;
+  width: 100%;
   max-width: 600px;
   position: relative;
+}
+
+.modalWrapper {
+  transform-origin: center;
+}
+
+@media (max-height: 900px) {
+  .modalWrapper {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-height: 800px) {
+  .modalWrapper {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-height: 700px) {
+  .modalWrapper {
+    transform: scale(0.7);
+  }
+}
+
+@media (max-height: 600px) {
+  .modalWrapper {
+    transform: scale(0.6);
+  }
 }
 
 .closeButton {
@@ -26,8 +54,13 @@
   right: 20px;
   border: none;
   background: transparent;
-  font-size: 24px;
   color: #191a15;
+  padding: 0;
+}
+
+.close {
+    width: 29px;
+  height: 29px;
 }
 
 .header {
@@ -51,16 +84,29 @@
 .psychologistsWrapper {
   display: flex;
   gap: 14px;
+  margin-bottom: 40px;
+}
+
+.textPsych {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33333;
+  color: #8a8a89;
+}
+
+.psyName {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191a15;
 }
 
 .photo {
   border-radius: 15px;
   width: 44px;
   height: 44px;
-}
-
-.nameWrapper {
-  margin-bottom: 40px;
 }
 
 .label {
@@ -75,6 +121,20 @@
     margin-bottom: 16px;
 }
 
+.labelTel {
+    display: flex;
+    border: 1px solid rgba(25, 26, 21, 0.1);
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #191a15;
+    margin-bottom: 16px;
+    align-items: center;
+    width: 235px;
+}
+
 .input {
     font-family: "Inter", sans-serif;
     font-size: 16px;
@@ -84,6 +144,20 @@
     outline: none;
     margin-left: 5px;
     padding: 0;
+    background: transparent;
+    width: 436px;
+}
+
+.inputTel {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #191a15;
+    border: none;
+    outline: none;
+    padding: 0;
+    background: transparent;
+    width: 153px;
 }
 
 .telWrapper {
@@ -96,6 +170,10 @@
   outline: none;
   resize: none;  
   background-color: transparent;
+  padding: 0;
+  width: 362px;
+  margin-left: 5px;
+  height: 83px;
 }
 
 .sendBtn {
@@ -115,4 +193,17 @@
 
 .sendBtn:hover {
   background: #f37113;
+}
+
+.error {
+    font-size: 12px;
+    line-height: 1.33333;
+    color: #8d929a;
+    margin-bottom: 10px;
+}
+
+.errorWrapper {
+  display: flex;
+  justify-content: space-around;
+
 }

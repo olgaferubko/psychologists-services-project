@@ -1,0 +1,83 @@
+.wrapper {
+  position: relative;
+  width: 194.5px;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #191a15;
+  background-color: transparent;
+}
+
+.value {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #191a15;
+}
+
+.icon {
+    font-size: 18px;
+    color: #191a15;
+}
+
+.dropdown {
+    position: absolute;
+    top: 44px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 20px 69px 0 rgba(0, 0, 0, 0.07);
+    padding: 16px;
+    z-index: 10;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #191a15;
+    margin-bottom: 16px;
+}
+
+.list {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    max-height: 96px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.option {
+    padding-bottom: 4px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: center;
+    color: rgba(25, 26, 21, 0.3);
+}
+
+.option:hover {
+  color: #191a15;
+}
+
+.active {
+  color: #191a15;
+}
