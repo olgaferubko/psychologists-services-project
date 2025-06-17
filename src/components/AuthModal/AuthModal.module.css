@@ -68,13 +68,20 @@
     font-family: "Inter", sans-serif;
     font-size: 16px;
     line-height: 1.25;
+    background: transparent;
     color: #191a15;
     border: none;
     outline: none;
     height: 20px;
-    width: 361px;
-    margin-left: 5px;
+    width: 402px;
     padding: 0;
+}
+
+.input::placeholder {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #191a15;
 }
 
 .togglePasswordBtn {

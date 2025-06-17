@@ -67,8 +67,7 @@ export default function AppointmentModal({ onClose, avatar_url, psychologist }) 
           </div>
 
           <label className={s.label}>
-            Name
-            <input className={s.input} type="text" {...register('userName')} />
+            <input className={s.input} type="text" {...register('userName')} placeholder='Name' />
           </label>
           {errors.userName && <p className={s.error}>{errors.userName.message}</p>}
 
@@ -92,14 +91,12 @@ export default function AppointmentModal({ onClose, avatar_url, psychologist }) 
             </div>
 
           <label className={s.label}>
-            Email
-            <input className={s.input} type="email" {...register('userEmail')} />
+            <input className={s.input} type="email" {...register('userEmail')} placeholder='Email' />
           </label>
           {errors.userEmail && <p className={s.error}>{errors.userEmail.message}</p>}
 
           <label className={s.label}>
-            Comment
-            <textarea className={s.text} {...register('comment')} />
+            <textarea className={s.text} {...register('comment')} placeholder='Comment' />
           </label>
 
           <button className={s.sendBtn} type="submit">Send</button>

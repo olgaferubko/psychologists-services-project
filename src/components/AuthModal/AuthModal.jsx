@@ -73,16 +73,15 @@ const AuthModal = ({ onClose }) => {
 
         <form onSubmit={handleSubmit(onSubmit)} noValidate className={s.form}>
           <label className={s.label}>
-            Email
-            <input type="email" {...register('email')} className={s.input} />
+            <input type="email" {...register('email')} placeholder='Email' className={s.input} />
           </label>
           <p className={s.error}>{errors.email?.message}</p>
 
           <label className={s.label}>
-            Password
             <input
               type={showPassword ? 'text' : 'password'}
               {...register('password')}
+              placeholder='Password'
               className={s.input}
             />
             <button
