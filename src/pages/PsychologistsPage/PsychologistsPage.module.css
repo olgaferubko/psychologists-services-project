@@ -1,4 +1,11 @@
 .container {
     background: #f3f3f3;
     flex-wrap: wrap;
+    padding: 0 128px;
+    display: flex;
+    flex-direction: column ;
+    margin-top: 64px;
+    align-items: center;
+    margin-bottom: 100px;
+
 }

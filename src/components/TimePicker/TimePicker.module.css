@@ -53,6 +53,9 @@
     max-height: 96px;
     overflow-y: auto;
     scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .list::-webkit-scrollbar {
@@ -65,12 +68,10 @@
 }
 
 .option {
-    padding-bottom: 4px;
     font-family: "Inter", sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.25;
-    text-align: center;
     color: rgba(25, 26, 21, 0.3);
 }
 

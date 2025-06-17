@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense, useState } from "react";
-import Header from "../components/Header/Header";
 import AuthModal from "../components/AuthModal/AuthModal";
 import RegistrationModal from "../components/RegistrationModal/RegistrationModal";
 import Loader from "../components/Loader/Loader";
@@ -14,8 +13,7 @@ function App() {
   const [isLoginOpen, setLoginOpen] = useState(false);
   const [isRegisterOpen, setRegisterOpen] = useState(false);
 
-  const handleLoginOpen = () => setLoginOpen(true);
-  const handleRegisterOpen = () => setRegisterOpen(true);
+
   const handleModalClose = () => {
     setLoginOpen(false);
     setRegisterOpen(false);
@@ -23,14 +21,9 @@ function App() {
 
   return (
     <Suspense fallback={<Loader />}>
-      <Header
-        onLoginOpen={handleLoginOpen}
-        onRegisterOpen={handleRegisterOpen}
-      />
-
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/psychologists" element={<PsychologistsPage />} />
+        <Route path="/" element={<HomePage onLoginOpen={() => setLoginOpen(true)} onRegisterOpen={() => setRegisterOpen(true)} />} />
+<Route path="/psychologists" element={<PsychologistsPage onLoginOpen={() => setLoginOpen(true)} onRegisterOpen={() => setRegisterOpen(true)} />} />
         <Route path="/favourites" element={<FavouritesPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
