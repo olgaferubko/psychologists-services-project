@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { toast } from 'react-hot-toast';
 import { MdClose } from "react-icons/md";
 import s from './AppointmentModal.module.css';
 import TimePicker from '../TimePicker/TimePicker';
@@ -27,11 +28,10 @@ export default function AppointmentModal({ onClose, avatar_url, psychologist }) 
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    console.log('Appointment Data:', data);
-    alert(`Appointment made with ${psychologist}`);
-    onClose();
-  };
+    const onSubmit = () => {
+      toast.success(`Appointment made with ${psychologist}`);
+      onClose();
+    };
 
     useEffect(() => {
       const handleKeyDown = e => {

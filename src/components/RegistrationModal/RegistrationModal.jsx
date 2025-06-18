@@ -58,9 +58,14 @@ const RegistrationModal = ({ onClose }) => {
             onClose();
             navigate("/psychologists", { replace: true });
         })
-        .catch(() => {
-            toast.error("Oops! Something went wrong");
-        });
+        .catch((error) => {
+            if (error.includes('auth/email-already-in-use')) {
+              toast.error('This email is already registered');
+            } else {
+              toast.error("Oops! Something went wrong");
+            }
+          });
+
     };
 
   return ReactDOM.createPortal(

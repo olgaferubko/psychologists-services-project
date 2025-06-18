@@ -35,16 +35,25 @@ export default function TimePicker({ value, onChange }) {
           <p className={s.title}>Meeting time</p>
           <ul className={s.list}>
             {timeOptions.map((time) => (
-              <li
-                key={time}
-                className={`${s.option} ${value === time ? s.active : ''}`}
-                onClick={() => {
-                  onChange(time);
-                  setIsOpen(false);
-                }}
-              >
-                {time}
-              </li>
+                <li
+                  key={time}
+                  className={`${s.option} ${value === time ? s.active : ''}`}
+                  onClick={() => {
+                    onChange(time);
+                    setIsOpen(false);
+                  }}
+                >
+                  {(() => {
+                    const [hours, minutes] = time.split(' : ');
+                    return (
+                      <span className={s.timeRow}>
+                        <span className={s.time}>{hours}</span>
+                        <span className={s.separator}>:</span>
+                        <span className={s.time}>{minutes}</span>
+                      </span>
+                    );
+                  })()}
+                </li>
             ))}
           </ul>
         </div>

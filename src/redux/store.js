@@ -12,9 +12,6 @@ import {
   REGISTER,
 } from "redux-persist";
 
-// Тимчасовий порожній reducer (замість filters/psychologists)
-const dummyReducer = (state = {}, action) => state;
-
 const persistConfig = {
   key: "auth",
   storage,
@@ -25,8 +22,6 @@ const persistedAuthReducer = persistReducer(persistConfig, authReducer);
 
 export const store = configureStore({
   reducer: {
-    filters: dummyReducer, // тимчасово замінює filters
-    psychologists: dummyReducer, // тимчасово замінює psychologists
     auth: persistedAuthReducer,
   },
   middleware: (getDefaultMiddleware) =>
