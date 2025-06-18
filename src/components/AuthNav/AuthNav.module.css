@@ -9,6 +9,7 @@
     border-radius: 30px;
     width: 124px;
     height: 48px;
+    padding: 0;
     background: transparent;
     font-weight: 500;
     font-size: 16px;
@@ -25,6 +26,7 @@
 .register {
     font-family: "Inter", sans-serif;
     border: none;    
+    padding: 0;
     border-radius: 30px;
     width: 171px;
     height: 48px;
