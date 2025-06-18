@@ -1,5 +1,7 @@
+import { useDispatch } from "react-redux";
+import { refresh } from "../redux/auth/operations";
 import { Routes, Route } from "react-router-dom";
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 import AuthModal from "../components/AuthModal/AuthModal";
 import RegistrationModal from "../components/RegistrationModal/RegistrationModal";
 import Loader from "../components/Loader/Loader";
@@ -22,6 +24,13 @@ const RegisterPage = ({ onRegisterOpen }) => {
 };
 
 function App() {
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+      dispatch(refresh());
+    }, [dispatch]);
+
   const [isLoginOpen, setLoginOpen] = useState(false);
   const [isRegisterOpen, setRegisterOpen] = useState(false);
 
