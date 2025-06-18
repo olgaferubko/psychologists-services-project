@@ -42,7 +42,7 @@ const AuthModal = ({ onClose }) => {
         navigate("/psychologists", { replace: true });
       })
       .catch(() => {
-        toast.error("Oops! Something went wrong");
+        toast.error("Oops! Something went wrong. Check your data.");
       });
   };
 

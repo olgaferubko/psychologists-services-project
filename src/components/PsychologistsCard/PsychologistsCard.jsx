@@ -1,8 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { TiStarFullOutline } from "react-icons/ti";
 import { FaCircle } from "react-icons/fa";
-import { FaRegHeart } from "react-icons/fa";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 import AppointmentModal from "../AppointmentModal/AppointmentModal";
+import { toast } from "react-hot-toast";
+import { useSelector } from "react-redux";
+import { selectIsLoggedIn } from "../../redux/auth/selectors";
+
 import s from "./PsychologistsCard.module.css";
 
 export default function PsychologistCard({ data }) {
@@ -19,8 +23,35 @@ export default function PsychologistCard({ data }) {
     reviews = [],
   } = data;
 
+  const isLoggedIn = useSelector(selectIsLoggedIn);
   const [showMore, setShowMore] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  useEffect(() => {
+    const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const found = storedFavorites.some(ps => ps.name === name);
+    setIsFavorite(found);
+  }, [name]);
+
+  const toggleFavorite = () => {
+    if (!isLoggedIn) {
+      toast.error("This feature is available only for authorized users");
+      return;
+    }
+
+    const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    if (isFavorite) {
+      const updated = storedFavorites.filter(item => item.name !== name);
+      localStorage.setItem('favorites', JSON.stringify(updated));
+      setIsFavorite(false);
+    } else {
+      const updated = [...storedFavorites, data];
+      localStorage.setItem('favorites', JSON.stringify(updated));
+      setIsFavorite(true);
+    }
+  };
 
   return (
     <div className={s.card}>
@@ -40,8 +71,12 @@ export default function PsychologistCard({ data }) {
               <span className={s.text}>
                 Price / 1 hour: <span className={s.price}>${price_per_hour}</span>
               </span>
-              <button className={s.favBtn} type="button">
-                <FaRegHeart className={s.heart} />
+              <button className={s.favBtn} type="button" onClick={toggleFavorite}>
+                {isFavorite ? (
+                  <FaHeart className={`${s.heart} ${s.active}`} />
+                ) : (
+                  <FaRegHeart className={s.heart} />
+                )}
               </button>
             </div>
           </div>
@@ -84,11 +119,11 @@ export default function PsychologistCard({ data }) {
                           <div className={s.nameWrapper}>
                             <p className={s.reviewer}>{rev.reviewer}</p>
                             <div className={s.wrapperScore}>
-                            <TiStarFullOutline className={s.star} />
-                            <p className={s.ratingScore}>{rev.rating}</p>
+                              <TiStarFullOutline className={s.star} />
+                              <p className={s.ratingScore}>{rev.rating}</p>
                             </div>
                           </div>
-                        </div> 
+                        </div>
                         <p className={s.comment}>{rev.comment}</p>
                       </li>
                     ))}

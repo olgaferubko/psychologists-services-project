@@ -106,6 +106,10 @@
     height: 25px;
 }
 
+.active {
+    color: #fc832c;
+}
+
 .mainText {
     display: flex;
     flex-direction: column;

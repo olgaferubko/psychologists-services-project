@@ -6,7 +6,7 @@ import Loader from "../components/Loader/Loader";
 
 const HomePage = lazy(() => import("../pages/HomePage/HomePage"));
 const PsychologistsPage = lazy(() => import("../pages/PsychologistsPage/PsychologistsPage"));
-const FavouritesPage = lazy(() => import("../pages/FavouritesPage/FavouritesPage"));
+const FavoritesPage = lazy(() => import("../pages/FavoritesPage/FavoritesPage"));
 const ErrorPage = lazy(() => import("../pages/ErrorPage/ErrorPage"));
 
 function App() {
@@ -23,8 +23,8 @@ function App() {
     <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<HomePage onLoginOpen={() => setLoginOpen(true)} onRegisterOpen={() => setRegisterOpen(true)} />} />
-<Route path="/psychologists" element={<PsychologistsPage onLoginOpen={() => setLoginOpen(true)} onRegisterOpen={() => setRegisterOpen(true)} />} />
-        <Route path="/favourites" element={<FavouritesPage />} />
+        <Route path="/psychologists" element={<PsychologistsPage onLoginOpen={() => setLoginOpen(true)} onRegisterOpen={() => setRegisterOpen(true)} />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
 

@@ -20,7 +20,7 @@ const isLoggedIn = useSelector(selectIsLoggedIn);
           Psychologists
         </NavLink>
         {isLoggedIn && (
-          <NavLink to="/favourites" className={linkBuilder}>
+          <NavLink to="/favorites" className={linkBuilder}>
             Favorites
           </NavLink>
         )}

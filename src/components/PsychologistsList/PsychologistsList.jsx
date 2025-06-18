@@ -2,7 +2,6 @@ import { useState } from 'react';
 import s from './PsychologistsList.module.css';
 import PsychologistsCard from '../PsychologistsCard/PsychologistsCard';
 import FilterPanel from '../FilterPanel/FilterPanel';
-import Loader from '../Loader/Loader';
 
 export default function PsychologistsList({ psychologists }) {
   const [visibleCount, setVisibleCount] = useState(3);

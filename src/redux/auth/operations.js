@@ -47,6 +47,7 @@ export const logIn = createAsyncThunk(
 export const logOut = createAsyncThunk("auth/logout", async (_, thunkAPI) => {
   try {
     await signOut(auth);
+    localStorage.removeItem('favorites');
   } catch (e) {
     return thunkAPI.rejectWithValue(e.message);
   }
