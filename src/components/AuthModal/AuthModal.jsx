@@ -14,7 +14,7 @@ import s from './AuthModal.module.css';
 
 const schema = Yup.object().shape({
   email: Yup.string().email('Invalid email format').required('Email is required'),
-  password: Yup.string().min(6, 'At least 6 symbols').required('Password is required'),
+  password: Yup.string().min(6, 'Password is required, at least 6 symbols').required('Password is required'),
 });
 
 const AuthModal = ({ onClose }) => {
