@@ -75,7 +75,7 @@ const RegistrationModal = ({ onClose }) => {
         <h2 className={s.heading}>Registration</h2>
         <p className={s.text}>Thank you for your interest in our platform! In order to register, we need some information. Please provide us with the following information.</p>
 
-        <form onSubmit={handleSubmit(onSubmit)} noValidate>
+        <form onSubmit={handleSubmit(onSubmit)} noValidate className={s.form}>
           <label className={s.label}>
             <input type="text" {...register('displayName')} placeholder='Name' className={s.input} />
           </label>

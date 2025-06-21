@@ -31,8 +31,8 @@ export default function HomePage({ onLoginOpen, onRegisterOpen }) {
                 <div className={s.wrapper}>
                     <span className={s.iconWrapper}><FaCheck className={s.check} /></span>
                     <div className={s.experience}>
-                    <p className={s.experienceText}>Experienced psychologists</p>
-                    <p className={s.experienceNumber}>15,000</p>
+                      <p className={s.experienceText}>Experienced psychologists</p>
+                      <p className={s.experienceNumber}>15,000</p>
                     </div>
                 </div>
                 </div>

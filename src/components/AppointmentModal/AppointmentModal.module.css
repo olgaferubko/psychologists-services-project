@@ -41,6 +41,11 @@
     transform: scale(0.7);
   }
 }
+@media (max-width: 1279px) {
+  .modalWrapper {
+    transform: scale(0.9);
+  }
+}
 
 .closeButton {
   position: absolute;
@@ -214,4 +219,11 @@
   display: flex;
   justify-content: space-around;
 
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .modal {
+    padding: 32px;
+    max-width: 536px;
+  }
 }

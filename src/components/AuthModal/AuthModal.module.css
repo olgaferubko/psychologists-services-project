@@ -49,20 +49,25 @@
     margin-bottom: 40px;
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 438px;
+    gap: 9px;
+}
+
 .label {
     position: relative;
     display: flex;
     border: 1px solid rgba(25, 26, 21, 0.1);
     border-radius: 12px;
+    width: 100%;
     padding: 16px 18px;
-    width: 438px;
-    height: 52px;
     font-family: "Inter", sans-serif;
     font-size: 16px;
     line-height: 1.25;
     color: #191a15;
-    margin-bottom: 18px;
-
 }
 
 .input {
@@ -73,8 +78,7 @@
     color: #191a15;
     border: none;
     outline: none;
-    height: 20px;
-    width: 402px;
+    width: 100%;
     padding: 0;
 }
 
@@ -123,4 +127,16 @@ input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px #fbfbfb inset !important;
   box-shadow: 0 0 0 1000px #fbfbfb inset !important;
   -webkit-text-fill-color: #191a15 !important;
+}
+
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .modal {
+        padding: 24px;
+        width: 486px;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
 }
