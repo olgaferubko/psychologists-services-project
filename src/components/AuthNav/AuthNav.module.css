@@ -42,3 +42,22 @@
 .register:hover {
     background: #f37113;
 }
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .linksContainer {
+        gap: 12px;
+    }
+
+    .login {
+        width: 94px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .register {
+        font-size: 14px;
+        width: 139px;
+        height: 32px;
+    }
+
+}

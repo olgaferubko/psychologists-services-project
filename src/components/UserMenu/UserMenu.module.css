@@ -48,3 +48,27 @@
 .logOutBtn:hover {
     border: 1px solid rgba(21, 21, 10, 0.363);
 }
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .iconWrapper {
+        margin-right: 12px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .icon {
+        width: 19px;
+        height: 19px;
+    }
+
+    .username {
+        font-size: 14px;
+        margin-right: 12px;
+    }
+
+    .logOutBtn {
+        width: 94px;
+        height: 32px;
+        font-size: 14px;
+    }
+}
