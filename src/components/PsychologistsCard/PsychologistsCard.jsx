@@ -65,8 +65,10 @@ export default function PsychologistCard({ data }) {
           <div className={s.cardHeader}>
             <p className={s.cardTitle}>Psychologist</p>
             <div className={s.raiting}>
+              <div className={s.ratingWrapper}>
               <TiStarFullOutline className={s.star} />
               <span className={s.text}>Rating: {rating}</span>
+              </div>
               <span className={s.divider}></span>
               <span className={s.text}>
                 Price / 1 hour: <span className={s.price}>${price_per_hour}</span>

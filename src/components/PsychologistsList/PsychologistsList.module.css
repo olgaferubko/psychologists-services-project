@@ -33,3 +33,10 @@
     margin-top: 24px;
     }
 }
+
+
+@media (max-width: 767px) {
+    .containerButton {
+    margin-top: 16px;
+    }
+}

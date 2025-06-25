@@ -33,29 +33,31 @@ const Header = ({ onLoginOpen, onRegisterOpen }) => {
     <header className={headerClass}>
       <div className={s.nav}>
         <Logo />
-        
         <nav className={s.desktopNav}>
           <Navigation />
         </nav>
-
       </div>
 
       <div className={s.auth}>
-        {isLoggedIn ? (
-          <UserMenu />
-        ) : (
-          <AuthNav onLoginOpen={onLoginOpen} onRegisterOpen={onRegisterOpen} />
-        )}
+        <div className={s.authNav}>
+          {isLoggedIn ? (
+            <UserMenu />
+          ) : (
+            <AuthNav onLoginOpen={onLoginOpen} onRegisterOpen={onRegisterOpen} />
+          )}
+        </div>
 
-        <button className={s.burger} onClick={toggleMenu}>
-          <IoIosMenu size={24} />
+        <button className={s.burger} onClick={toggleMenu} aria-label="Open menu">
+          <IoIosMenu size={32} />
         </button>
       </div>
 
       {isMobileMenuOpen && (
-        <MobileMenu 
+        <MobileMenu
           isLoggedIn={isLoggedIn}
           onClose={() => setMobileMenuOpen(false)}
+          onLoginOpen={onLoginOpen}
+          onRegisterOpen={onRegisterOpen}
         />
       )}
     </header>

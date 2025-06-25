@@ -23,14 +23,18 @@
   display: none;
   background: none;
   border: none;
-  cursor: pointer;
-  padding: 4px;
 }
 
 .auth {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.authNav {
+    display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .home {
@@ -44,6 +48,7 @@
 @media (min-width: 768px) and (max-width: 1279px) {
   .header {
     padding: 0 48px;
+    height: 80px;
   }
 
   .desktopNav {
@@ -59,6 +64,7 @@
 @media (max-width: 767px) {
   .header {
     padding: 0 24px;
+    height: 60px;
   }
 
   .desktopNav {
@@ -66,10 +72,15 @@
   }
 
   .burger {
+    padding: 0;
     display: block;
   }
 
   .nav {
     gap: 24px;
+  }
+
+  .authNav {
+    display: none;
   }
 }

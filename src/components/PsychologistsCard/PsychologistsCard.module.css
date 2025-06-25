@@ -304,3 +304,103 @@
         margin-top: 4px;
     }
 }
+
+
+@media (max-width: 767px) {
+    .card {
+        width: 300px;
+        padding: 16px;
+        position: relative;
+    }
+
+    .cardHeader {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: start;
+        margin-top: 10px;
+    }
+
+
+    .cardPhoto {
+        display: flex;
+        flex-direction: column;
+    }
+
+      .photoWrapper {
+        width: 72px;
+        height: 72px;
+    }
+
+      .photo {
+        padding: 9px;
+    }
+
+      .wrapper {
+        margin-left: 0px;
+    }
+
+    .raiting {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        flex-direction: column;
+        gap: 8px;
+        align-items: end;
+    }
+
+    .ratingWrapper {
+        display: flex;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .heart {
+        margin: 0;
+        width: 20px;
+        height: 20px;
+    }
+
+    .mainText {
+        width: 100%;
+    }
+
+    .name {
+        margin-bottom: 12px;
+    }
+
+    .skillWrapper {
+        width: 268px;
+        margin-bottom: 12px;
+    }
+
+    .skill {
+        padding: 4px 8px;
+        display: block;
+        margin: 0;
+    }
+
+    .skillDecor {
+        margin: 0;
+    }
+
+    .about {
+        margin-bottom: 12px;
+    }
+    .list {
+        margin-top: 12px;
+    }
+
+    .item {
+        margin-bottom: 8px;
+    }
+
+    .reviewsWrapper {
+        margin-bottom: 8px;
+    }
+
+    .appointmentBtn {
+        margin-top: 2px;
+    } 
+}

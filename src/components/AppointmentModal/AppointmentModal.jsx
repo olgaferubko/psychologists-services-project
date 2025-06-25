@@ -55,6 +55,9 @@ export default function AppointmentModal({ onClose, avatar_url, psychologist }) 
           to book your personal appointment with a professional psychologist. We guarantee
           confidentiality and respect for your privacy.
         </p>
+        <p className={s.paragraphShort}>
+          You are on the verge of changing your life for the better.
+        </p>
         <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <div className={s.psychologistsWrapper}>
             {avatar_url && (
@@ -76,6 +79,7 @@ export default function AppointmentModal({ onClose, avatar_url, psychologist }) 
                 +380
                 <input className={s.inputTel} type="tel" {...register('userPhone')} />
               </label>
+              {errors.userPhone && <p className={s.errorPhone}>{errors.userPhone.message}</p>}
 
               <label className={s.label}>
                 <Controller
@@ -84,6 +88,7 @@ export default function AppointmentModal({ onClose, avatar_url, psychologist }) 
                   render={({ field }) => <TimePicker {...field} />}
                 />  
               </label>
+              {errors.preferredTime && <p className={s.errorPhone}>{errors.preferredTime.message}</p>}
             </div>
             <div className={s.errorWrapper}>
             {errors.userPhone && <p className={s.error}>{errors.userPhone.message}</p>}
