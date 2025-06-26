@@ -67,6 +67,10 @@
   color: #191a15;
 }
 
+.ratingWrapper {
+    display: flex;
+}
+
 .star {
     color: #ffc531;
     width: 22px;
